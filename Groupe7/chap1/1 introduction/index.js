@@ -1,6 +1,6 @@
-import http from 'http';
+import http from 'node:http';
 
-const server = http.createServer(function(request, response) {
+const server = http.createServer(function (request, response) {
     response.writeHead(400,  "L'operation a ete un echec", {"content-type": 'text/html', "mon-header": 'mon entete personnalisee'});
     // response.setHeader('content-type', 'text/html');
     // response.setHeader('mon-header', 'mon entete personnalisee');
@@ -14,3 +14,4 @@ const server = http.createServer(function(request, response) {
 });
 
 server.listen(8000);
+
